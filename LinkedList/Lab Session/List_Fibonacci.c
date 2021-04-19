@@ -64,15 +64,15 @@ get the following output:
 #include <stdlib.h>
 #include <string.h>
 
-void generateFibonacciSeries(int num);
-// bool isMemoryAllocated(struct node *temp);
-void display();
-void reverse();
-
 struct node {
   int data;
   struct node *nextNode;
 };
+
+void generateFibonacciSeries(int num);
+bool isMemoryAllocated(struct node *temp);
+void display();
+void reverse();
 
 struct node *fibonacciSeries = NULL;
 
@@ -147,7 +147,6 @@ void generateFibonacciSeries(int num) {
   }
 }
 
-/*
 bool isMemoryAllocated(struct node *temp) {
   if (temp == NULL) {
     printf("Out of Memory Error. Exiting.\n");
@@ -156,7 +155,6 @@ bool isMemoryAllocated(struct node *temp) {
     return true;
   }
 }
-*/
 
 void display() {
   if (fibonacciSeries == NULL) {
